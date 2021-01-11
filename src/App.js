@@ -6,14 +6,18 @@ import { useState } from 'react';
 
 function App() {
   const [name, setName] = useState('');
-  const [HWname, setHWname] = useState('Krille')
+  const [HWname, setHWname] = useState('Krille');
+  const [profession, setProfession] = useState('');
+  const [HWprofession, setHWprofession] = useState('Coder Extraordinarie');
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
     //alert(`Name posted: "${name}"`)
-    console.log("Submit button pressed: " + name)
+    console.log("Submit button pressed: " + name + " " + profession)
     setHWname(name);
+    setHWprofession(profession);
     setName('');
+    setProfession('');
     }
 
   console.log("Hello from App")
@@ -21,8 +25,8 @@ function App() {
     <div className="App-header">
       {/* <Welcome name="Sara" />; */}
       
-      <HelloWorld HWname={HWname} profession="Coder Extraordinarie" />
-      <PFTest name={name} setName={setName} handleSubmit={handleSubmit} />
+      <HelloWorld HWname={HWname} HWprofession={HWprofession} />
+      <PFTest name={name} setName={setName} profession={profession} setProfession={setProfession} handleSubmit={handleSubmit} />
       <p className="App">Tjaba!</p>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

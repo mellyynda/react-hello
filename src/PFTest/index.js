@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 
-// skapa en komponent
-// skapa ett inputfält och en knapp
-// använd State!
+// 1. Ändra PFTEst till att även innehålla en profession-input
+// 2. Rendera komponentet i App
+// 3. Duplicera nuverande funktionalitet för name så att det även funkar för profession
+// 4. Tips: profession kommer behöva ett nytt state i PFTest och ett nytt state i App.
+// 5. modifiera HelloWorld-komponenten så att den tar emot och visar profession
 
 
 function PFTest (props) {
@@ -22,6 +24,13 @@ function PFTest (props) {
         value={props.name}
         onChange={e => props.setName(e.target.value)} />
     </label>
+    <br />
+    <label>Your profession:
+        <input type="text"
+            value={props.profession}
+            onChange={e => props.setProfession(e.target.value)} />
+    </label>
+    <br />
     <input type="submit" />
     </form>
     </>)
