@@ -5,7 +5,7 @@ function HelloWorld (props) {
     return (
         <div>
             <h1>Look {props.name}, my very first component, yeah!</h1>
-            <p>Thursday at last!</p>
+            <p>Monday at last!</p>
         </div>
     )
 }

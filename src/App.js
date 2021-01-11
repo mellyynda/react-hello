@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './HelloWorld';
+import InputTest from './InputTest/index.js';
+
 
 function App() {
   console.log("Hello from App")
   return (
     <div className="App-header">
       {/* <Welcome name="Sara" />; */}
-      <HelloWorld name="Krille" profession="Slacker" />
+      
+      <HelloWorld name="Krille" profession="Coder Extraordinarie" />
+      <InputTest />
       <p className="App">Tjaba!</p>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
