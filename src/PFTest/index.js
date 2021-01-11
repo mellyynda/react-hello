@@ -6,19 +6,21 @@ import React, { useState } from 'react';
 
 
 function PFTest (props) {
-    const [comment, setComment] = useState('');
-    console.log("InputTest ran! comment: " + comment)
 
-    const handleSubmit = (evt) => {
+    // få name och setName att finnas i detta scope. Hur?
+    console.log("PFTest ran! name: " + props.name)
+
+    /* const handleSubmit = (evt) => {
         evt.preventDefault();
-        alert(`Comment posted: "${comment}"`)
-    }
+        alert(`Name posted: "${props.name}"`)
+        props.setName('');
+    } */
     return (<>
-    <form onSubmit={handleSubmit}>
-    <label>Your comment:
+    <form onSubmit={props.handleSubmit}>
+    <label>Your name:
         <input type="text" 
-        value={comment}
-        onChange={e => setComment(e.target.value)} />
+        value={props.name}
+        onChange={e => props.setName(e.target.value)} />
     </label>
     <input type="submit" />
     </form>
